@@ -1,0 +1,22 @@
+{
+  "hosts": [
+    { "host": "aerospike-adtech-1.internal", "port": 3000 },
+    { "host": "aerospike-adtech-2.internal", "port": 3000 }
+  ],
+  "namespace": "ad_platform",
+  "user": "adtech_mcp",
+  "password_env": "AEROSPIKE_PASSWORD",
+  "role": "read-write",
+  "timeout_ms": 200,
+  "max_retries": 2,
+  "default_max_records": 5000,
+  "max_batch_size": 5000,
+  "transport": "stdio",
+  "audit": {
+    "enabled": true,
+    "buffer_size": 500,
+    "rate_limit_enabled": true,
+    "rate_limit_rps": 200,
+    "rate_limit_burst": 500
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "hosts": [
+    { "host": "aerospike-node-1.internal", "port": 3000 },
+    { "host": "aerospike-node-2.internal", "port": 3000 },
+    { "host": "aerospike-node-3.internal", "port": 3000 }
+  ],
+  "namespace": "production",
+  "user": "mcp_service",
+  "password_env": "AEROSPIKE_PASSWORD",
+  "tls": {
+    "enabled": true,
+    "ca_file": "/etc/ssl/aerospike-ca.pem",
+    "cert_file": "/etc/ssl/client-cert.pem",
+    "key_file": "/etc/ssl/client-key.pem"
+  },
+  "role": "read-only",
+  "timeout_ms": 500,
+  "max_retries": 3,
+  "default_max_records": 1000,
+  "max_batch_size": 5000,
+  "transport": "stdio",
+  "audit": {
+    "enabled": true,
+    "file_path": "/var/log/aerospike-mcp/audit.log",
+    "buffer_size": 1000,
+    "rate_limit_enabled": true,
+    "rate_limit_rps": 50,
+    "rate_limit_burst": 100
+  }
+}

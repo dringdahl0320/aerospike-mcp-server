@@ -1,0 +1,9 @@
+{
+  "hosts": [{ "host": "localhost", "port": 3000 }],
+  "namespace": "test",
+  "role": "read-write",
+  "timeout_ms": 1000,
+  "max_batch_size": 1000,
+  "transport": "websocket",
+  "port": 8080
+}
