@@ -105,7 +105,7 @@ func (s *WebSocketServer) handleWebSocket(w http.ResponseWriter, r *http.Request
 
 	// Return client ID for subsequent requests
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(map[string]string{
+	_ = json.NewEncoder(w).Encode(map[string]string{
 		"client_id": clientID,
 		"status":    "connected",
 		"message":   "Use /ws/send to send messages and /ws/receive to poll for responses",
@@ -169,7 +169,7 @@ func (s *WebSocketServer) handleSend(w http.ResponseWriter, r *http.Request) {
 
 	// Also return response directly
 	w.Header().Set("Content-Type", "application/json")
-	w.Write(responseData)
+	_, _ = w.Write(responseData)
 }
 
 // handleReceive handles long-polling for responses.
@@ -198,11 +198,11 @@ func (s *WebSocketServer) handleReceive(w http.ResponseWriter, r *http.Request) 
 	select {
 	case msg := <-client.messages:
 		w.Header().Set("Content-Type", "application/json")
-		w.Write(msg)
+		_, _ = w.Write(msg)
 	case <-timeout:
 		// No message, return empty response
 		w.Header().Set("Content-Type", "application/json")
-		json.NewEncoder(w).Encode(map[string]string{"status": "no_messages"})
+		_ = json.NewEncoder(w).Encode(map[string]string{"status": "no_messages"})
 	case <-r.Context().Done():
 		return
 	}
@@ -215,7 +215,7 @@ func (s *WebSocketServer) handleHealth(w http.ResponseWriter, r *http.Request) {
 	s.mu.RUnlock()
 
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(map[string]interface{}{
+	_ = json.NewEncoder(w).Encode(map[string]interface{}{
 		"status":    "healthy",
 		"transport": "websocket",
 		"clients":   clientCount,
