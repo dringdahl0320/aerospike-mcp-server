@@ -12,7 +12,6 @@ import (
 	"io"
 	"log"
 	"os"
-	"sync"
 	"time"
 
 	"github.com/dringdahl0320/aerospike-mcp-server/internal/aerospike"
@@ -37,7 +36,6 @@ type Server struct {
 	auditLogger *audit.Logger
 	rateLimiter *audit.RateLimiter
 	validator   *audit.Validator
-	mu          sync.RWMutex
 }
 
 // NewServer creates a new MCP server instance.

@@ -430,7 +430,7 @@ func (c *Client) QueryRecords(ctx context.Context, namespace, setName, indexName
 	}
 
 	if asFilter != nil {
-		stmt.SetFilter(asFilter)
+		_ = stmt.SetFilter(asFilter)
 	}
 
 	recordset, err := c.client.Query(c.queryPolicy, stmt)

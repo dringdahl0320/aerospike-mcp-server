@@ -190,7 +190,7 @@ func (s *SSEServer) handleMessage(w http.ResponseWriter, r *http.Request) {
 
 	// Respond with accepted
 	w.WriteHeader(http.StatusAccepted)
-	w.Write([]byte("Accepted"))
+	_, _ = w.Write([]byte("Accepted"))
 }
 
 // handleHealth returns server health status.
@@ -209,5 +209,5 @@ func (s *SSEServer) handleHealth(w http.ResponseWriter, r *http.Request) {
 		"version": ServerVersion,
 	}
 
-	json.NewEncoder(w).Encode(response)
+	_ = json.NewEncoder(w).Encode(response)
 }

@@ -127,7 +127,7 @@ func (l *Logger) Log(event Event) {
 		return
 	}
 
-	l.writer.Write(append(data, '\n'))
+	_, _ = l.writer.Write(append(data, '\n'))
 
 	// Buffer for potential batch operations
 	l.buffer = append(l.buffer, event)

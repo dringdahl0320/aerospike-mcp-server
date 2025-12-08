@@ -24,8 +24,9 @@ linters-settings:
     enable-all: true
     disable:
       - fieldalignment
+      - unusedwrite
   goimports:
-    local-prefixes: github.com/onchain-media/aerospike-mcp-server
+    local-prefixes: github.com/dringdahl0320/aerospike-mcp-server
   misspell:
     locale: US
 
