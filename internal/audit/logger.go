@@ -157,10 +157,14 @@ func (l *Logger) LogRead(ctx context.Context, operation, namespace, set, key str
 
 	// Extract context values
 	if user := ctx.Value(ContextKeyUser); user != nil {
-		event.User = user.(string)
+		if userStr, ok := user.(string); ok {
+			event.User = userStr
+		}
 	}
 	if clientID := ctx.Value(ContextKeyClientID); clientID != nil {
-		event.ClientID = clientID.(string)
+		if clientIDStr, ok := clientID.(string); ok {
+			event.ClientID = clientIDStr
+		}
 	}
 
 	l.Log(event)
@@ -187,10 +191,14 @@ func (l *Logger) LogWrite(ctx context.Context, operation, namespace, set, key st
 
 	// Extract context values
 	if user := ctx.Value(ContextKeyUser); user != nil {
-		event.User = user.(string)
+		if userStr, ok := user.(string); ok {
+			event.User = userStr
+		}
 	}
 	if clientID := ctx.Value(ContextKeyClientID); clientID != nil {
-		event.ClientID = clientID.(string)
+		if clientIDStr, ok := clientID.(string); ok {
+			event.ClientID = clientIDStr
+		}
 	}
 
 	l.Log(event)
@@ -214,10 +222,14 @@ func (l *Logger) LogAdmin(ctx context.Context, operation string, details map[str
 
 	// Extract context values
 	if user := ctx.Value(ContextKeyUser); user != nil {
-		event.User = user.(string)
+		if userStr, ok := user.(string); ok {
+			event.User = userStr
+		}
 	}
 	if clientID := ctx.Value(ContextKeyClientID); clientID != nil {
-		event.ClientID = clientID.(string)
+		if clientIDStr, ok := clientID.(string); ok {
+			event.ClientID = clientIDStr
+		}
 	}
 
 	l.Log(event)

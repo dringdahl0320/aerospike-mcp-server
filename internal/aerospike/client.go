@@ -15,6 +15,7 @@ import (
 	"time"
 
 	as "github.com/aerospike/aerospike-client-go/v7"
+
 	"github.com/dringdahl0320/aerospike-mcp-server/pkg/config"
 )
 
@@ -949,7 +950,7 @@ func (c *Client) ListUDFs(ctx context.Context) ([]UDFInfo, error) {
 		result[i] = UDFInfo{
 			Name: udf.Filename,
 			Type: string(udf.Language),
-			Hash: string(udf.Hash),
+			Hash: udf.Hash,
 		}
 	}
 
