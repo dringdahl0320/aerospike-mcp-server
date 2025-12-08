@@ -15,7 +15,7 @@ import (
 	"time"
 
 	as "github.com/aerospike/aerospike-client-go/v7"
-	"github.com/onchain-media/aerospike-mcp-server/pkg/config"
+	"github.com/dringdahl0320/aerospike-mcp-server/pkg/config"
 )
 
 // Client wraps the Aerospike client with additional MCP-specific functionality.

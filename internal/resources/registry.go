@@ -11,8 +11,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/onchain-media/aerospike-mcp-server/internal/aerospike"
-	"github.com/onchain-media/aerospike-mcp-server/pkg/config"
+	"github.com/dringdahl0320/aerospike-mcp-server/internal/aerospike"
+	"github.com/dringdahl0320/aerospike-mcp-server/pkg/config"
 )
 
 // ResourceDefinition represents an MCP resource definition.

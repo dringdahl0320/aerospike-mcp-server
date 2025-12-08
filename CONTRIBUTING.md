@@ -51,8 +51,8 @@ By participating in this project, you agree to abide by our Code of Conduct. Ple
 
 ```bash
 # Clone the repository
-git clone https://github.com/dringdahl0320/aerospike-adtech-mcp.git
-cd aerospike-adtech-mcp
+git clone https://github.com/dringdahl0320/aerospike-mcp-server.git
+cd aerospike-mcp-server
 
 # Install dependencies
 go mod download

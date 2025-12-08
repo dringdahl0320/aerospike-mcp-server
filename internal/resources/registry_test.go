@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/onchain-media/aerospike-mcp-server/pkg/config"
+	"github.com/dringdahl0320/aerospike-mcp-server/pkg/config"
 )
 
 func TestResourceDefinition(t *testing.T) {

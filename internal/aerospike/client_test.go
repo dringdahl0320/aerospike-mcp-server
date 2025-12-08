@@ -6,7 +6,7 @@ package aerospike
 import (
 	"testing"
 
-	"github.com/onchain-media/aerospike-mcp-server/pkg/config"
+	"github.com/dringdahl0320/aerospike-mcp-server/pkg/config"
 )
 
 func TestNewClientConfig(t *testing.T) {

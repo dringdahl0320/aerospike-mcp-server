@@ -15,11 +15,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/onchain-media/aerospike-mcp-server/internal/aerospike"
-	"github.com/onchain-media/aerospike-mcp-server/internal/audit"
-	"github.com/onchain-media/aerospike-mcp-server/internal/resources"
-	"github.com/onchain-media/aerospike-mcp-server/internal/tools"
-	"github.com/onchain-media/aerospike-mcp-server/pkg/config"
+	"github.com/dringdahl0320/aerospike-mcp-server/internal/aerospike"
+	"github.com/dringdahl0320/aerospike-mcp-server/internal/audit"
+	"github.com/dringdahl0320/aerospike-mcp-server/internal/resources"
+	"github.com/dringdahl0320/aerospike-mcp-server/internal/tools"
+	"github.com/dringdahl0320/aerospike-mcp-server/pkg/config"
 )
 
 const (

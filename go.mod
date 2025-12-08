@@ -1,4 +1,4 @@
-module github.com/onchain-media/aerospike-mcp-server
+module github.com/dringdahl0320/aerospike-mcp-server
 
 go 1.21
 

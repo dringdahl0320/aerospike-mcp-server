@@ -21,7 +21,7 @@ A Model Context Protocol (MCP) server for Aerospike database, enabling AI assist
 ### Build from Source
 
 ```bash
-git clone https://github.com/onchain-media/aerospike-mcp-server.git
+git clone https://github.com/dringdahl0320/aerospike-mcp-server.git
 cd aerospike-mcp-server
 make build
 ```
@@ -272,6 +272,6 @@ Contributions are welcome! Please read our contributing guidelines before submit
 
 ## Support
 
-- [GitHub Issues](https://github.com/onchain-media/aerospike-mcp-server/issues)
+- [GitHub Issues](https://github.com/dringdahl0320/aerospike-mcp-server/issues)
 - [Aerospike Documentation](https://docs.aerospike.com/)
 - [MCP Specification](https://modelcontextprotocol.io/)
